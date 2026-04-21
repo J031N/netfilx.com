@@ -2,12 +2,11 @@ import React, { useContext, useEffect, useState } from 'react'
 import './Banner.css'
 import axios from '../../Axios/Axios'
 import { API_KEY,imageUrl } from '../../Constants/Constants'
-import { posterContext } from '../../Store/PosterContext'
-import {useNavigate,Link} from 'react-router-dom'
+
+import {Link} from 'react-router-dom'
 
 function Banner() {
-  const {setPosterDetails}=useContext(posterContext)
-  const  navigate=useNavigate()
+  
 const [movie,setMovie]=useState([])
  useEffect(()=>{
   axios.get(`discover/tv?api_key=${API_KEY}&with_networks=213 `).then((res)=>{

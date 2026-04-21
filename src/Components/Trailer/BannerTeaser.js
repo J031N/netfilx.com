@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './Trailer.css'
-import { Button, Grid, TextField } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 import { imageUrl } from '../../Constants/Constants'
 import { useLocation } from 'react-router-dom'
 import Youtube from 'react-youtube'

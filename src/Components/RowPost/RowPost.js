@@ -2,13 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import './RowPost.css'
 import axios from '../../Axios/Axios'
 import { imageUrl } from '../../Constants/Constants'
-import { posterContext } from '../../Store/PosterContext'
+
 import {Link, useNavigate} from 'react-router-dom'
 
 
 function RowPost(props) {
 const[post,setPost]=useState([])
-const {setPosterDetails}=useContext(posterContext)
+
 const navigate=useNavigate()
   useEffect(()=>{
     axios.get(props.url).then((res)=>{
